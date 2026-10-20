@@ -4,7 +4,7 @@ cask "qwenwhisper" do
 
   url "https://github.com/hukopo/qwenwishper/releases/download/v#{version}/QwenWhisper-#{version}-macos-arm64.dmg"
   name "QwenWhisper"
-  desc "Push-to-talk dictation for macOS — local Whisper transcription + Qwen 3.5 rewriting"
+  desc "Local dictation and live translation for macOS. Whisper + Qwen, runs on device"
   homepage "https://github.com/hukopo/qwenwishper"
 
   depends_on macos: :sonoma
