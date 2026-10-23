@@ -7,6 +7,7 @@ Homebrew tap for [QwenWhisper](https://github.com/hukopo/qwenwishper) and [Shmot
 ```bash
 brew install --cask hukopo/tap/qwenwhisper
 brew install --cask hukopo/tap/shmotix
+brew install --cask hukopo/tap/shmotix
 ```
 
 ## Update
