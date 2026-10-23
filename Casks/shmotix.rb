@@ -11,6 +11,11 @@ cask "shmotix" do
 
   app "Shmotix.app"
 
+  # приложение не подписано — без этого Gatekeeper не даст открыть
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/Shmotix.app"]
+  end
+
   zap trash: [
     "~/Library/Caches/dev.shmotix.app",
     "~/Library/WebKit/dev.shmotix.app",
