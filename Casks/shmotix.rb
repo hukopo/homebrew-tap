@@ -1,6 +1,6 @@
 cask "shmotix" do
-  version "0.1.0"
-  sha256 "abeb86e32ffda30b666a562f416c6b444e47e177c1f3dbdfd6d3432439bf331a"
+  version "0.2.0"
+  sha256 "b98b538e3c53e8bcfe10e5c6e1a591bb2744ffb008728492c1b47a92d0feac66"
 
   url "https://github.com/hukopo/shmotix/releases/download/v#{version}/Shmotix-#{version}-macos-arm64.dmg"
   name "Shmotix"
