@@ -1,6 +1,6 @@
 cask "qwenwhisper" do
-  version "0.5.0"
-  sha256 "e6761a2967449b85666f63799a5bd57a1bf7e80f55616f139c1d5f8b0da073bc"
+  version "0.5.1"
+  sha256 "95713990469cc0f24f0153da6cf7e40b193a633885f0b92d398bbaed8029e345"
 
   url "https://github.com/hukopo/qwenwishper/releases/download/v#{version}/QwenWhisper-#{version}-macos-arm64.dmg"
   name "QwenWhisper"
