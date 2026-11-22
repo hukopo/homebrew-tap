@@ -12,9 +12,10 @@ cask "qwenwhisper" do
 
   app "QwenWhisper.app"
 
-  # Unsigned build: drop quarantine so macOS doesn't report the app as "damaged" after install/upgrade.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/QwenWhisper.app"]
+  # Unsigned build: drop quarantine before the app is moved to /Applications,
+  # otherwise macOS reports it as "damaged" after install/upgrade.
+  preflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "QwenWhisper.app"], chdir: ".", writable_paths: ["QwenWhisper.app"]
   end
 
   zap trash: [
