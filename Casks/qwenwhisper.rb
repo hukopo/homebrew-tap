@@ -1,6 +1,6 @@
 cask "qwenwhisper" do
-  version "0.5.1"
-  sha256 "95713990469cc0f24f0153da6cf7e40b193a633885f0b92d398bbaed8029e345"
+  version "0.5.3"
+  sha256 "4f2f7acb19c2762e934af052106b6855c8843f94cfe3e0e399ed394eab8e23ff"
 
   url "https://github.com/hukopo/qwenwishper/releases/download/v#{version}/QwenWhisper-#{version}-macos-arm64.dmg"
   name "QwenWhisper"
@@ -11,6 +11,11 @@ cask "qwenwhisper" do
   depends_on arch: :arm64
 
   app "QwenWhisper.app"
+
+  # Unsigned build: drop quarantine so macOS doesn't report the app as "damaged" after install/upgrade.
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/QwenWhisper.app"]
+  end
 
   zap trash: [
     "~/Library/Caches/QwenWhisper",
